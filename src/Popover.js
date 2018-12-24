@@ -1,4 +1,5 @@
 import React from "react";
+import "./Popover.css";
 
 class Popover extends React.Component {
   constructor(props) {
@@ -52,14 +53,16 @@ class Popover extends React.Component {
           Select an option
         </button>
         {this.state.isOpen ? (
-          <ul>
+          <ul className="popup" tabIndex={0}>
             <li>
               <button>Option 1</button>
             </li>
             <li>
               <button>Option 2</button>
             </li>
-            <li>Option 3</li>
+            <li tabIndex={0}>Option 3</li>
+            <li tabIndex={0}>Option 4</li>
+            <li>Option 5</li>
           </ul>
         ) : null}
       </div>
